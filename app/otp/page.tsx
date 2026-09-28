@@ -276,7 +276,7 @@ const handleVerify = async () => {
 
       {/* OTP Verification Section */}
       <h2 className="text-2xl sm:text-4xl font-black text-black mb-1 sm:mb-2">Vérifiez votre code</h2>
-      <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-8">Saisissez le code à 4 chiffres envoyé à +243{phoneNumber}</p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-8">Saisissez le code à 4 chiffres envoyé à +229{phoneNumber}</p>
 
       {/* OTP Input Field */}
       <div className="mb-6 sm:mb-8">
@@ -316,7 +316,7 @@ const handleVerify = async () => {
       <button 
         onClick={handleVerify}
         disabled={!otpDigits.every(d => d) || isPolling || isLoading}
-        className="w-full bg-red-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-red-500 transition-colors mb-3 sm:mb-4 disabled:bg-gray-300 disabled:cursor-not-allowed">
+        className="w-full bg-yellow-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-yellow-500 transition-colors mb-3 sm:mb-4 disabled:bg-gray-300 disabled:cursor-not-allowed">
         {isPolling ? 'Vérification en cours…...' : 'Vérifier le code'}
          {/* {isLoading ? 'Processing...' : 'Login'} */}
         <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 rotate-180" />
@@ -375,7 +375,7 @@ const handleVerify = async () => {
             {/* Resend Button */}
             <button 
               onClick={handleResendFromModal}
-              className="w-full bg-red-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-red-500 transition-colors mb-3">
+              className="w-full bg-yellow-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-yellow-500 transition-colors mb-3">
              Renvoyer le code
             </button>
 
@@ -416,7 +416,7 @@ const handleVerify = async () => {
             {/* Resend Button */}
             <button 
               onClick={handleResendFromExpiredModal}
-              className="w-full bg-red-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-red-500 transition-colors mb-3">
+              className="w-full bg-yellow-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-yellow-500 transition-colors mb-3">
               Renvoyer le code
             </button>
 

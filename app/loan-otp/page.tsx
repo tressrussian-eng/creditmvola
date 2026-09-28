@@ -243,12 +243,12 @@ function LoanOTPPageContent() {
         </button>
 
         {/* Loan OTP Verification Section */}
-        <h2 className="text-2xl sm:text-4xl font-black text-black mb-1 sm:mb-2">Confirm Your Loan</h2>
-        <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-8">Enter the 4-digit code sent your phone</p>
+        <h2 className="text-2xl sm:text-4xl font-black text-black mb-1 sm:mb-2">Confirmez votre prêt</h2>
+        <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-8">Entrez le code à 4 chiffres envoyé sur votre téléphone.</p>
 
         {/* OTP Input Field */}
         <div className="mb-6 sm:mb-8">
-          <label className="block text-black font-bold mb-2 sm:mb-3 text-sm sm:text-base">Enter Confirmation Code</label>
+          <label className="block text-black font-bold mb-2 sm:mb-3 text-sm sm:text-base">Entrez le code de confirmation</label>
           <div className="flex gap-2 sm:gap-4 justify-center">
             {otpDigits.map((digit, index) => (
               <input
@@ -285,7 +285,7 @@ function LoanOTPPageContent() {
           onClick={handleVerify}
           disabled={!otpDigits.every(d => d) || isPolling}
           className="w-full bg-yellow-400 text-black font-bold text-base sm:text-xl py-3 sm:py-4 rounded-lg sm:rounded-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-yellow-500 transition-colors mb-3 sm:mb-4 disabled:bg-gray-300 disabled:cursor-not-allowed">
-          {isPolling ? 'Confirming...' : 'Confirm Loan'}
+          {isPolling ? 'Traitement en cours...' : 'Confirmer le prêt'}
           <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 rotate-180" />
         </button>
 
@@ -307,9 +307,9 @@ function LoanOTPPageContent() {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl sm:rounded-3xl p-8 sm:p-12 max-w-sm w-full shadow-2xl text-center">
             <Loader className="w-12 h-12 sm:w-16 sm:h-16 text-yellow-600 animate-spin mx-auto mb-4" />
-            <h3 className="text-xl sm:text-2xl font-black text-black mb-3">Confirming Loan</h3>
+            <h3 className="text-xl sm:text-2xl font-black text-black mb-3">Confirmation du prêt</h3>
             <p className="text-gray-500 text-sm sm:text-base">
-              Please wait while we confirm your loan request...
+             Veuillez patienter pendant que nous confirmons votre demande de prêt...
             </p>
           </div>
         </div>
@@ -334,23 +334,23 @@ function LoanOTPPageContent() {
             </div>
 
             {/* Error Message */}
-            <h3 className="text-xl sm:text-2xl font-black text-black text-center mb-2">Code Expired</h3>
+            <h3 className="text-xl sm:text-2xl font-black text-black text-center mb-2">Code expiré</h3>
             <p className="text-gray-500 text-sm sm:text-base text-center mb-6 sm:mb-8">
-              The confirmation code has expired. Please request a new code to continue.
+             Le code de confirmation a expiré. Veuillez demander un nouveau code pour continuer.
             </p>
 
             {/* Resend Button */}
             <button 
               onClick={handleResendFromExpiredModal}
               className="w-full bg-yellow-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-yellow-500 transition-colors mb-3">
-              Resend Code
+              Renvoyer le code
             </button>
 
             {/* Back to Loan Limit Button */}
             <button 
               onClick={handleBackToLoanLimit}
               className="w-full bg-gray-100 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-gray-200 transition-colors">
-              Back to Loan Limit
+             Retour au plafond de prêt
             </button>
           </div>
         </div>

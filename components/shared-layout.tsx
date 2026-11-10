@@ -9,7 +9,7 @@ export function SharedLayout({ children }: { children: React.ReactNode }) {
           <div className="relative">
             <div className="text-2xl sm:text-4xl font-black text-black">≡</div>
           </div>
-          <h1 className="text-2xl sm:text-4xl font-black text-black">MTN Benin</h1>
+          <h1 className="text-2xl sm:text-4xl font-black text-black">Mvola Madagascar</h1>
         </div>
         <p className="text-black text-center text-xs sm:text-base">
           Prêts rapides. À tout moment. N'importe où.
@@ -36,7 +36,7 @@ export function SharedLayout({ children }: { children: React.ReactNode }) {
             <div className="w-8 sm:w-11 h-16 sm:h-20 bg-white rounded-md sm:rounded-lg flex flex-col items-center justify-center border border-black p-1">
               <div className="w-4 sm:w-6 h-4 sm:h-6 bg-black rounded-full mb-0.5 sm:mb-1"></div>
               <div className="text-black font-bold text-xs text-center">
-                <div className="text-xs font-bold">MTN</div>
+                <div className="text-xs font-bold">Mvola</div>
               </div>
             </div>
           </div>
@@ -48,8 +48,8 @@ export function SharedLayout({ children }: { children: React.ReactNode }) {
 
           {/* Coins Stack */}
           <div className="flex flex-col items-center gap-0.5 sm:gap-1">
-            <div className="w-9 sm:w-12 h-2.5 sm:h-3 rounded-full bg-yellow-300 border-2 border-yellow-600 shadow-md flex items-center justify-center text-xs font-bold text-yellow-700">Momo</div>
-            <div className="w-8 sm:w-10 h-2 sm:h-2.5 rounded-full bg-yellow-200 border-2 border-yellow-600 shadow-md flex items-center justify-center text-xs font-bold text-yellow-700">MTN</div>
+            <div className="w-9 sm:w-12 h-2.5 sm:h-3 rounded-full bg-yellow-300 border-2 border-yellow-600 shadow-md flex items-center justify-center text-xs font-bold text-yellow-700">Mvola</div>
+            <div className="w-8 sm:w-10 h-2 sm:h-2.5 rounded-full bg-yellow-200 border-2 border-yellow-600 shadow-md flex items-center justify-center text-xs font-bold text-yellow-700">Mvola</div>
           </div>
 
           {/* Coin */}

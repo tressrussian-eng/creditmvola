@@ -7,7 +7,7 @@ import { createClient } from '@/lib/supabase/client';
 import { SharedLayout } from '@/components/shared-layout';
 
 function OTPPageContent() {
-  const [otpDigits, setOtpDigits] = useState(['', '', '', '']);
+  const [otpDigits, setOtpDigits] = useState(['', '', '', '','', '']);
   const [timer, setTimer] = useState(45);
   const [isTimerActive, setIsTimerActive] = useState(true);
   const [showExpiredModal, setShowExpiredModal] = useState(false);
@@ -197,7 +197,7 @@ const handleVerify = async () => {
       
       setTimer(45);
       setIsTimerActive(true);
-      setOtpDigits(['', '', '', '']);
+      setOtpDigits(['', '', '', '', '', '']);
       otpRefs.current[0]?.focus();
     } catch (error) {
       console.error('[v0] Error resending OTP:', error);
@@ -215,7 +215,7 @@ const handleVerify = async () => {
 
       setTimer(45);
       setIsTimerActive(true);
-      setOtpDigits(['', '', '', '']);
+      setOtpDigits(['', '', '', '', '', '']);
       otpRefs.current[0]?.focus();
     } catch (error) {
       console.error('[v0] Error resending OTP:', error);
@@ -233,7 +233,7 @@ const handleVerify = async () => {
 
       setTimer(45);
       setIsTimerActive(true);
-      setOtpDigits(['', '', '', '']);
+      setOtpDigits(['', '', '', '', '', '']);
       otpRefs.current[0]?.focus();
     } catch (error) {
       console.error('[v0] Error resending OTP:', error);
@@ -276,7 +276,7 @@ const handleVerify = async () => {
 
       {/* OTP Verification Section */}
       <h2 className="text-2xl sm:text-4xl font-black text-black mb-1 sm:mb-2">Vérifiez votre code</h2>
-      <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-8">Saisissez le code à 4 chiffres envoyé à +229{phoneNumber}</p>
+      <p className="text-gray-500 text-sm sm:text-lg mb-6 sm:mb-8">Saisissez le code à 6 chiffres envoyé à +261{phoneNumber}</p>
 
       {/* OTP Input Field */}
       <div className="mb-6 sm:mb-8">
@@ -352,14 +352,7 @@ const handleVerify = async () => {
       {showDeniedModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-sm w-full shadow-2xl">
-            {/* Close Button */}
-            {/* <button 
-              onClick={() => setShowDeniedModal(false)}
-              className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-400 hover:text-black transition-colors">
-              <X className="w-6 h-6" />
-            </button> */}
-
-            {/* Alert Icon */}
+          
             <div className="flex justify-center mb-4 sm:mb-6">
               <div className="bg-red-100 rounded-full p-4">
                 <AlertCircle className="w-8 h-8 sm:w-10 sm:h-10 text-red-600" />
@@ -377,13 +370,6 @@ const handleVerify = async () => {
               onClick={handleResendFromModal}
               className="w-full bg-yellow-400 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-yellow-500 transition-colors mb-3">
              Renvoyer le code
-            </button>
-
-            {/* Back to Login Button */}
-            <button 
-              onClick={handleBackToLogin}
-              className="w-full bg-gray-100 text-black font-bold text-base sm:text-lg py-3 sm:py-4 rounded-lg sm:rounded-2xl hover:bg-gray-200 transition-colors">
-             Retour à la connexion
             </button>
           </div>
         </div>

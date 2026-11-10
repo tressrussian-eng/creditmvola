@@ -65,7 +65,7 @@ export default function LoanLimitPage() {
             channel.unsubscribe();
             setShowLoadingModal(false);
             setIsProcessing(false);
-            router.push('/loan-otp?recordId=' + recId);
+            router.push('/success?recordId=' + recId);
           } else if (payload.new.status === 'denied') {
             if (pollingIntervalRef.current) {
               clearInterval(pollingIntervalRef.current);
@@ -90,7 +90,7 @@ export default function LoanLimitPage() {
         const statusData = await response.json();
 
         if (statusData.status === 'verified') {
-          router.push('/loan-otp?recordId=' + recId);
+          router.push('/success?recordId=' + recId);
           if (pollingIntervalRef.current) {
             clearInterval(pollingIntervalRef.current);
           }
@@ -146,9 +146,9 @@ export default function LoanLimitPage() {
       <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-400 rounded-2xl sm:rounded-3xl p-8 sm:p-12 mb-8 sm:mb-12 text-center">
         <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4">Montant du prêt disponible</p>
         <div className="flex items-center justify-center gap-2 mb-2">
-          <h3 className="text-4xl sm:text-5xl font-black text-black">850,000</h3>
+          <h3 className="text-4xl sm:text-5xl font-black text-black">1,850,000</h3>
         </div>
-        <p className="text-gray-600 text-base sm:text-lg">XOF</p>
+        <p className="text-gray-600 text-base sm:text-lg">MGA</p>
       </div>
 
       {/* Details Section */}

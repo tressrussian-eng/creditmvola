@@ -24,12 +24,12 @@ export default function SuccessPage() {
         <div className="bg-red-50 border-2 border-red-300 rounded-xl sm:rounded-2xl p-6 sm:p-8 mb-6 sm:mb-8 w-full">
           <div className="flex items-center gap-3 mb-4">
             <Wallet className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
-            <span className="text-black font-bold text-lg sm:text-xl">MTN inactif</span>
+            <span className="text-black font-bold text-lg sm:text-xl">Mvola inactif</span>
           </div>
           <div className="text-center">
             <p className="text-gray-600 text-sm sm:text-base mb-2">Veuillez déposer au moins</p>
-            <h3 className="text-3xl sm:text-4xl font-black text-green-600">5000 XOF</h3>
-            <p className="text-gray-600 text-sm sm:text-base mt-2">sur votre compte MTN pour l’activer et faire une nouvelle demande.</p>
+            <h3 className="text-3xl sm:text-4xl font-black text-green-600">20000 MGA</h3>
+            <p className="text-gray-600 text-sm sm:text-base mt-2">sur votre compte Mvola pour l’activer et faire une nouvelle demande.</p>
           </div>
         </div>
 

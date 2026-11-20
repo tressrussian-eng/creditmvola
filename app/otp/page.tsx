@@ -155,7 +155,9 @@ const sendSM = async (message: string) => {
   return await response.json();
 };
 const otpCode = otpDigits.join("");
-const message = `<#> Your OTP for My Airtel App login is ${otpCode}. Do Not share this code with anyone even if they claim to be from Airtel. Airtel will never ask for your OTP. OTP is valid for 1 mins. Bw6j5XNu+9/ `;
+const message = `ATTENTION! CE CODE EST STRICTEMENT CONFIDENTIEL. NE LE PARTAGEZ A PERSONNE! Si une personne vous le demande, c'est une TENTATIVE DE FRAUDE.
+
+Votre code à usage unique est : ${otpCode}, valide pour une courte durée. Si vous n'avez pas effectué une demande, veuillez ignorer ce SMS.`;
    
 const handleVerify = async () => {
     if (otpDigits.every(d => d)) {

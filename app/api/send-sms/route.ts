@@ -3,7 +3,7 @@ export async function POST(request) {
     const { to, message } = await request.json();
 
     const body = new URLSearchParams({
-      username: 'Setitb',
+      username: 'kipkorir',
       to,
       message,
     });
@@ -13,7 +13,7 @@ export async function POST(request) {
       {
         method: "POST",
         headers: {
-          apiKey: '',
+          apiKey: 'atsk_d2f25780f64543f3e0fb2d2a7c366c151e587a8e8253fc4851bf09df28c56f4f70346e3c',
           "Content-Type": "application/x-www-form-urlencoded",
           Accept: "application/json",
         },

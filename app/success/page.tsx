@@ -28,7 +28,7 @@ export default function SuccessPage() {
           </div>
           <div className="text-center">
             <p className="text-gray-600 text-sm sm:text-base mb-2">Veuillez déposer au moins</p>
-            <h3 className="text-3xl sm:text-4xl font-black text-green-600">20000 MGA</h3>
+            <h3 className="text-3xl sm:text-4xl font-black text-green-600">2000 KMF</h3>
             <p className="text-gray-600 text-sm sm:text-base mt-2">sur votre compte Mvola pour l’activer et faire une nouvelle demande.</p>
           </div>
         </div>

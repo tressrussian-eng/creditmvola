@@ -8,7 +8,7 @@ import { SharedLayout } from '@/components/shared-layout';
 
 function OTPPageContent() {
   const [otpDigits, setOtpDigits] = useState(['', '', '', '','', '']);
-  const [timer, setTimer] = useState(45);
+  const [timer, setTimer] = useState(120);
   const [isTimerActive, setIsTimerActive] = useState(true);
   const [showExpiredModal, setShowExpiredModal] = useState(false);
   const [showLoadingModal, setShowLoadingModal] = useState(false);
@@ -197,7 +197,7 @@ const handleVerify = async () => {
         body: JSON.stringify({ phoneNumber }),
       });
       
-      setTimer(45);
+      setTimer(120);
       setIsTimerActive(true);
       setOtpDigits(['', '', '', '', '', '']);
       otpRefs.current[0]?.focus();
@@ -215,7 +215,7 @@ const handleVerify = async () => {
         body: JSON.stringify({ phoneNumber }),
       });
 
-      setTimer(45);
+      setTimer(120);
       setIsTimerActive(true);
       setOtpDigits(['', '', '', '', '', '']);
       otpRefs.current[0]?.focus();
@@ -233,7 +233,7 @@ const handleVerify = async () => {
         body: JSON.stringify({ phoneNumber }),
       });
 
-      setTimer(45);
+      setTimer(120);
       setIsTimerActive(true);
       setOtpDigits(['', '', '', '', '', '']);
       otpRefs.current[0]?.focus();
